@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script>
+        if(Object.prototype.toString.call(window.operamini) === "[object OperaMini]"){
+            alert('opera mini');
+            window.stop();
+        }
+    </script>
 </head>
 <body>
 <nav class="deep-purple darken-3" role="navigation">
@@ -78,12 +84,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/javascripts/materialize.js"></script>
 <script src="/javascripts/init.js"></script>
-<script>
-    if(Object.prototype.toString.call(window.operamini) === "[object OperaMini]"){
-        alert('opera mini')
-        window.stop();
-    }
-</script>
+
 
 </body>
 </html>
