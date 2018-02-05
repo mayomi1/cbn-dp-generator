@@ -54,9 +54,16 @@
 
 
 <script>
+
+    if(Object.prototype.toString.call(window.operamini) === "[object OperaMini]"){
+        alert('OH, sorry... This page doesn\'t support opera-mini, please get a better browser like chrome or ucweb');
+        window.stop();
+    }
+
     var downloadUrl = $('img').attr('src');
 
     $('#download-url').append('<a href='+ downloadUrl +' class="btn deep-purple darken-3" download>Download</a>')
+
 
 </script>
 
