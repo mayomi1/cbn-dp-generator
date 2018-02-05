@@ -22,13 +22,13 @@ let upload = multer({storage: storage}).single('image');
 module.exports = (req, res) => {
 
     upload(req, res, function (err) {
-        if(err) {
-            return res.json({
-                status: false,
-                message: 'Cannot upload picture, please try again',
-                error: err
-            })
-        }
+        // if(err) {
+        //     return res.json({
+        //         status: false,
+        //         message: 'Cannot upload picture, please try again',
+        //         error: err
+        //     })
+        // }
 
         cloudinary.config({
             cloud_name: 'solukey',

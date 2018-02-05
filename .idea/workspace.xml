@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5a89ebd-62ca-445e-bf8c-5014e0a6ef2a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-01-05 at 7.05.41 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-01-05 at 7.17.58 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-01-05 at 7.18.18 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-01-05 at 7.20.37 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-01-24 at 12.53.46 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-02-01 at 4.14.32 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/Screen Shot 2018-02-01 at 4.15.52 PM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/sajs.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Upload.js" afterPath="$PROJECT_DIR$/controllers/Upload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/renderImage.js" afterPath="$PROJECT_DIR$/controllers/renderImage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.hbs" afterPath="$PROJECT_DIR$/views/index.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.hbs" afterPath="$PROJECT_DIR$/views/layout.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/show.hbs" afterPath="$PROJECT_DIR$/views/show.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,8 +52,8 @@
       <file leaf-file-name="Upload.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/Upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="265">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -280,12 +267,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516982043657</updated>
       <workItem from="1516982045904" duration="5247000" />
-      <workItem from="1517658585613" duration="27351000" />
+      <workItem from="1517658585613" duration="27673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32598000" />
+    <option name="totallyTimeSpent" value="32920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -500,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/Upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="265">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding />
         </state>
       </provider>
