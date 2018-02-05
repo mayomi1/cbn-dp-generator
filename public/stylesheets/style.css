@@ -5,6 +5,12 @@
  *
  * Made By MaterializeCSS.com
  */
+body {
+    font-family: 'Lato', serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
 .icon-block {
   padding: 0 15px;
@@ -12,3 +18,26 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.center-btn {
+    margin:auto;
+    display:block;
+    color:black;
+}
+
+.banner {
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/photo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+
+main {
+    flex: 1 0 auto;
+}
+

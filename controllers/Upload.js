@@ -36,49 +36,12 @@ module.exports = (req, res) => {
             api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
         });
 
-
-        cloudinary.v2.uploader.text("Sample Name",
-            {public_id: "dark_name", font_family: "Arial", font_size: 12, font_color: "black", opacity: 90},
-            function(error, result) {console.log(result)});
-
-
         cloudinary.uploader.upload(req.file.path,
+            function(result) {
+                req.session.image = result.public_id;
 
-
-
-        function(result) {
-
-
-            //req.session.image = result.url;
-
-            //req.session.name =req.body.name;
-
-            res.json(result)
-
-
-
+                return res.redirect('/show');
         });
-
-
-
-        // const newImage = UploadModel({
-        //    n fullName: fullName,
-        //     image: image
-        // });
-
-        // return newImage.save().then((savedImage) => {
-        //     return res.json({
-        //         status: true,
-        //         data: savedImage
-        //     })
-        //
-        // }).catch((error) => {
-        //     return res.json({
-        //         status: false,
-        //         message: 'unable to store image',
-        //         error: error
-        //     })
-        // })
 
 
 

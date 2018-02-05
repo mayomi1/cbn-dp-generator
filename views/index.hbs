@@ -7,32 +7,24 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.1/croppie.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="deep-purple darken-3" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">CBN DP</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
+<div class="section no-pad-bot banner responsive-img" id="index-banner">
     <div class="container">
         <br><br>
-        <h1 class="header center orange-text">CBN DP-Generator</h1>
+        <h1 class="header center white-text ">CBN DP-Generator</h1>
         <div class="row center">
-            <h5 class="header col s12 light">Upload your picture and download is straight way, no delay, no ketchup</h5>
+            <h5 class="header col s12 white-text">Upload your picture and download is straight way, no delay, no ketchup</h5>
         </div>
         <div class="row center">
-            <a href="" id="download-button" class="btn-large waves-effect waves-light orange">
+            <a href="" id="download-button" class="btn-large waves-effect waves-light deep-purple darken-3">
                 Customize Mine</a>
         </div>
         <br><br>
@@ -44,29 +36,38 @@
 <div class="container">
     <div class="section">
 
-        <div id="upload-demo"></div>
-        <div class="center">
-        <!--<a href="" id="download">-->
-            <!--<img id="img-preview" style="width: 360px; height: 360px;"/>-->
-            <!--<input type="file" id="file-upload" value="" accept="image/*" name="image">-->
-            <!--Download-->
-        <!--</a>-->
-        <br>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" id="file-upload" value="" accept="image/*" name="image">
-                <input type="submit" class="btn btn-large" value="upload">
-            </form>
-        <button>Upload</button>
+       <div class="row">
+        <div class="col s12">
+            <div class="card deep-purple darken-3">
+                <div class="card-content white-text">
+                    <span class="card-title">Choose the picture you would like to customized</span>
+
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <div class="file-field input-field">
+                            <div class="btn  blue-grey lighten-5">
+                                <span style="color: black">Select Photo</span>
+                                <input type="file" id="file-upload" accept="image/*" name="image">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                        <br>
+                        <input type="submit" class="center-btn btn btn-large blue-grey lighten-5" style="" value="upload">
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
 
     </div>
     <br><br>
 </div>
 
-<footer class="page-footer orange">
+<footer class="page-footer deep-purple darken-3">
     <div class="footer-copyright">
         <div class="container">
-            copyright <a class="orange-text text-lighten-3" href="http://materializecss.com">ASF-OAU</a>
+            copyright <a class="blue-grey-text lighten-5-text" href="http://materializecss.com">ASF-OAU</a>
         </div>
     </div>
 </footer>
@@ -76,46 +77,6 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/javascripts/materialize.js"></script>
 <script src="/javascripts/init.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.1/croppie.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script>
-//    var CLOUDINARY_URL= 'https://api.cloudinary.com/v1_1/solukey/upload';
-//    var CLOUDINARY_UPLOAD_PRESET = 'nymmuqxc';
-//
-//    var imgPreview = document.getElementById('img-preview');
-//    var fileUpload = document.getElementById('file-upload');
-//    var download = document.getElementById('download');
-//
-//    fileUpload.addEventListener('change', function(event) {
-//        var file = event.target.files[0];
-//        var formData = new FormData();
-//        formData.append('file', file);
-//        formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
-//
-//        var  mergeImage = require('merge-images');
-//        axios({
-//            url: CLOUDINARY_URL,
-//            method: 'POST',
-//            headers: {
-//                'Content-Type' : 'application/x-www-form-urlencoded'
-//            },
-//            data: formData
-//        }).then((res) => {
-//            imgPreview.src = res.data.secure_url;
-//            download.href = res.data.secure_url;
-//
-//            var uploadedImage = res.data.secure_url;
-//            var sampleImage = 'http://res.cloudinary.com/solukey/image/upload/v1509462062/sample.jpg';
-//
-//            mergeImage([sampleImage, uploadedImage]).then(b64 => download.href = b64);
-//
-//        }).catch(err => console.log(err))
-//
-//    })
-
-
-</script>
-
 
 </body>
 </html>

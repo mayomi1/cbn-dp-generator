@@ -13,12 +13,14 @@ class RenderImage {
             api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
         });
 
-        let test =  cloudinary.image('sample.jpg',
+
+        let test =  cloudinary.image( req.session.image+'.png',
 
             {
-                underlay: "rzqnqtnh21w5iv5tv4zy.png",
-                width: 180, height: 180, effect: "brightness:100",
-                transformation: {crop: 'thumb', height: 80, width: 80 , gravity: 'face', radius: 'max'}
+                underlay: 'jcaineewbmenmebqfldc.png',
+                //underlay: req.session.image+'.png',
+                width: 700, height: 700,
+                transformation: {crop: 'fill', height: 340, width: 340 , gravity: 'face', radius: 'max'}
             });
 
 

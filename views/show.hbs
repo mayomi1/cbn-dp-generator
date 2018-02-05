@@ -7,48 +7,41 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.1/croppie.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="deep-purple darken-3" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">CBN DP</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
+
+<main>
+
     <div class="container">
-
-
-
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="section">
-        <div id="image-show">
-            {{{image}}}
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-image">
+                        {{{image}}}
+                    </div>
+                    <br>
+                    <button class="btn waves-effect waves-light center-btn deep-purple darken-3" type="submit" id="download-url">
+                    </button>
+                    <br>
+                </div>
+            </div>
         </div>
-
-        <div id="download-url"></div>
-
     </div>
-    <br><br>
-</div>
 
-<footer class="page-footer orange">
+
+</main>
+
+<footer class="page-footer deep-purple darken-3 sticky-action">
     <div class="footer-copyright">
         <div class="container">
-            copyright <a class="orange-text text-lighten-3" href="http://materializecss.com">ASF-OAU</a>
+            copyright <a class="blue-grey-text lighten-5-text" href="http://materializecss.com">ASF-OAU</a>
         </div>
     </div>
 </footer>
@@ -63,67 +56,7 @@
 <script>
     var downloadUrl = $('img').attr('src');
 
-    $('#download-url').append('<a href='+ downloadUrl +' class="btn" download="cbn2018DP">Download</a>')
-
-    //    var CLOUDINARY_URL= 'https://api.cloudinary.com/v1_1/solukey/upload';
-    //    var CLOUDINARY_UPLOAD_PRESET = 'nymmuqxc';
-    //
-    //    var imgPreview = document.getElementById('img-preview');
-    //    var fileUpload = document.getElementById('file-upload');
-    //    var download = document.getElementById('download');
-    //
-    //    fileUpload.addEventListener('change', function(event) {
-    //        var file = event.target.files[0];
-    //        var formData = new FormData();
-    //        formData.append('file', file);
-    //        formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
-    //
-    //        var  mergeImage = require('merge-images');
-    //        axios({
-    //            url: CLOUDINARY_URL,
-    //            method: 'POST',
-    //            headers: {
-    //                'Content-Type' : 'application/x-www-form-urlencoded'
-    //            },
-    //            data: formData
-    //        }).then((res) => {
-    //            imgPreview.src = res.data.secure_url;
-    //            download.href = res.data.secure_url;
-    //
-    //            var uploadedImage = res.data.secure_url;
-    //            var sampleImage = 'http://res.cloudinary.com/solukey/image/upload/v1509462062/sample.jpg';
-    //
-    //            mergeImage([sampleImage, uploadedImage]).then(b64 => download.href = b64);
-    //
-    //        }).catch(err => console.log(err))
-    //
-    //    })
-
-//    cloudinary.config({
-//        cloud_name: 'solukey',
-//        api_key: '675925443541542',
-//        api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
-//    });
-//
-//
-//    var test = cloudinary.image('fvylzndslyg3bfrdafhe.png',
-//            {
-//                width: 150,
-//                height: 150,
-//                crop: 'fill',
-//                gravity: 'face',
-//                radius: 'max',
-//                overflow: 'sample.jpg'
-//            });
-//
-//    console.log('theis',test);
-//
-//    $('#image-show').append(test);
-
-
-
-
-
+    $('#download-url').append('<a href='+ downloadUrl +' class="btn deep-purple darken-3" download>Download</a>')
 
 </script>
 
