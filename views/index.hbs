@@ -45,11 +45,19 @@
     <div class="section">
 
         <div id="upload-demo"></div>
-        <a>
-            <span>Upload</span>
-            <input type="file" id="upload" value="choose your Picture" accept="image/*">
-        </a>
-        <button></button>
+        <div class="center">
+        <!--<a href="" id="download">-->
+            <!--<img id="img-preview" style="width: 360px; height: 360px;"/>-->
+            <!--<input type="file" id="file-upload" value="" accept="image/*" name="image">-->
+            <!--Download-->
+        <!--</a>-->
+        <br>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" id="file-upload" value="" accept="image/*" name="image">
+                <input type="submit" class="btn btn-large" value="upload">
+            </form>
+        <button>Upload</button>
+        </div>
 
     </div>
     <br><br>
@@ -69,22 +77,45 @@
 <script src="/javascripts/materialize.js"></script>
 <script src="/javascripts/init.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.1/croppie.js"></script>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    $uploadCrop = $('#upload-demo').croppie({
-        enableExif: true,
-        viewport: {
-            width: 200,
-            height: 200,
-            type: 'circle'
-        },
-        boundary: {
-            width: 300,
-            height: 300
-        }
-    });
+//    var CLOUDINARY_URL= 'https://api.cloudinary.com/v1_1/solukey/upload';
+//    var CLOUDINARY_UPLOAD_PRESET = 'nymmuqxc';
+//
+//    var imgPreview = document.getElementById('img-preview');
+//    var fileUpload = document.getElementById('file-upload');
+//    var download = document.getElementById('download');
+//
+//    fileUpload.addEventListener('change', function(event) {
+//        var file = event.target.files[0];
+//        var formData = new FormData();
+//        formData.append('file', file);
+//        formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+//
+//        var  mergeImage = require('merge-images');
+//        axios({
+//            url: CLOUDINARY_URL,
+//            method: 'POST',
+//            headers: {
+//                'Content-Type' : 'application/x-www-form-urlencoded'
+//            },
+//            data: formData
+//        }).then((res) => {
+//            imgPreview.src = res.data.secure_url;
+//            download.href = res.data.secure_url;
+//
+//            var uploadedImage = res.data.secure_url;
+//            var sampleImage = 'http://res.cloudinary.com/solukey/image/upload/v1509462062/sample.jpg';
+//
+//            mergeImage([sampleImage, uploadedImage]).then(b64 => download.href = b64);
+//
+//        }).catch(err => console.log(err))
+//
+//    })
+
 
 </script>
+
 
 </body>
 </html>

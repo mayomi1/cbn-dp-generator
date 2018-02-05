@@ -3,12 +3,13 @@
  */
 
 const multer = require('multer');
+var cloudinary = require('cloudinary');
 
 const UploadModel = require('../models/Upload');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'public/uploads')
+        cb(null, 'uploads')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
@@ -19,6 +20,7 @@ let upload = multer({storage: storage}).single('image');
 
 
 module.exports = (req, res) => {
+
     upload(req, res, function (err) {
         if(err) {
             return res.json({
@@ -28,31 +30,55 @@ module.exports = (req, res) => {
             })
         }
 
-        const fullName = req.body.fullName;
-
-        let image;
-        if(req.file) {
-            image = req.file.filename;
-        }
-
-        const newImage = UploadModel({
-            fullName: fullName,
-            image: image
+        cloudinary.config({
+            cloud_name: 'solukey',
+            api_key: '675925443541542',
+            api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
         });
 
-        return newImage.save().then((savedImage) => {
-            return res.json({
-                status: true,
-                data: savedImage
-            })
 
-        }).catch((error) => {
-            return res.json({
-                status: false,
-                message: 'unable to store image',
-                error: error
-            })
-        })
+        cloudinary.v2.uploader.text("Sample Name",
+            {public_id: "dark_name", font_family: "Arial", font_size: 12, font_color: "black", opacity: 90},
+            function(error, result) {console.log(result)});
+
+
+        cloudinary.uploader.upload(req.file.path,
+
+
+
+        function(result) {
+
+
+            //req.session.image = result.url;
+
+            //req.session.name =req.body.name;
+
+            res.json(result)
+
+
+
+        });
+
+
+
+        // const newImage = UploadModel({
+        //    n fullName: fullName,
+        //     image: image
+        // });
+
+        // return newImage.save().then((savedImage) => {
+        //     return res.json({
+        //         status: true,
+        //         data: savedImage
+        //     })
+        //
+        // }).catch((error) => {
+        //     return res.json({
+        //         status: false,
+        //         message: 'unable to store image',
+        //         error: error
+        //     })
+        // })
 
 
 
