@@ -1,0 +1,12 @@
+{
+  "name": "CBN-dp-Generator",
+  "short_name": "CBN-dp",
+  "theme_color": "#4527a0",
+  "background_color": "#ffffff",
+  "display": "browser",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": null,
+  "splash_pages": null
+}

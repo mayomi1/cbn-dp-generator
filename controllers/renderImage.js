@@ -4,7 +4,7 @@
 var cloudinary = require('cloudinary');
 
 class RenderImage {
-    getImage(req, res){
+     getImage(req, res){
         console.log('working1');
 
         cloudinary.config({
@@ -17,7 +17,7 @@ class RenderImage {
         let test =  cloudinary.image( req.session.image+'.png',
 
             {
-                underlay: 'jcaineewbmenmebqfldc.png',
+                underlay: 'mewKL_isue59.jpg',
                 //underlay: req.session.image+'.png',
                 width: 700, height: 700,
                 transformation: {crop: 'fill', height: 340, width: 340 , gravity: 'face', radius: 'max'}
@@ -32,8 +32,8 @@ class RenderImage {
 
 
 
-
     }
+
 
 }
 

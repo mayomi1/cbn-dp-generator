@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="manifest" href="/assets/manifest.json">
 
 </head>
 <body>
@@ -84,6 +85,39 @@
         alert('OH, sorry... This page doesn\'t support opera-mini, please get a better browser like chrome or ucweb');
         window.stop();
     }
+    if('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.register('/sw.js');
+            console.log('sw registered')
+        } catch (error) {
+            console.log('sw failed')
+        }
+    }
+
+    window.addEventListener('online', function(e) {
+        // Resync data with server
+        console.log('you are online');
+//        Page.hideOfflineWarning();
+//        Arrivals.loadData();
+    }, false);
+
+    window.addEventListener('offline', function(e){
+        // queue up events for server.
+        console.log('you are offline');
+//        Page.showOfflineWarning();
+    }, false);
+
+    // check if the user is connected.
+    if(navigator.onLine) {
+//        Arrivals.loadData();
+    } else {
+        // show offline message
+//        Page.showOfflineWarning();
+    }
+
+
+
+
 </script>
 
 </body>

@@ -12,6 +12,8 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
+    "express-manifest-helpers": "^0.4.0",
+    "express-rev": "^0.1.2",
     "express-session": "^1.15.6",
     "hbs": "~4.0.1",
     "merge-images": "^1.0.7",
