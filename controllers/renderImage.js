@@ -20,7 +20,7 @@ class RenderImage {
                 underlay: 'cbnnewerone_km5sk4',
                 //underlay: req.session.image+'.png',
                 width: 700, height: 700,
-                transformation: {crop: 'fill', height: 260, width: 260 , gravity: 'face', radius: 'max'}
+                transformation: {crop: 'fill', height: 280, width: 280 , gravity: 'face', radius: 'max'}
             });
 
 
