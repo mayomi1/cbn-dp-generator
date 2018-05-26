@@ -17,7 +17,7 @@ class RenderImage {
         let test =  cloudinary.image( req.session.image+'.png',
 
             {
-                underlay: 'cbnnewerone_km5sk4',
+                underlay: 'cbnnewerone_orjox2',
                 //underlay: req.session.image+'.png',
                 width: 700, height: 700,
                 transformation: {crop: 'fill', height: 280, width: 280 , gravity: 'face', radius: 'max'}
