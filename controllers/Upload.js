@@ -3,7 +3,8 @@
  */
 
 const multer = require('multer');
-var cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary');
+const config = require('../config/main');
 
 const UploadModel = require('../models/Upload');
 
@@ -30,11 +31,11 @@ module.exports = (req, res) => {
         //     })
         // }
 
-        cloudinary.config({
-            cloud_name: 'solukey',
-            api_key: '675925443541542',
-            api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
-        });
+	    cloudinary.config({
+		    cloud_name: config.cloud_name,
+		    api_key: config.api_key,
+		    api_secret: config.api_secret
+	    });
 
         cloudinary.uploader.upload(req.file.path,
             function(result) {

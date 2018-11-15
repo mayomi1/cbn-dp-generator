@@ -1,16 +1,16 @@
 /**
  *Created by mayomi.ayandiran on 2/3/18
  */
-var cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary');
+const config = require('../config/main');
 
 class RenderImage {
      getImage(req, res){
-        console.log('working1');
 
         cloudinary.config({
-            cloud_name: 'solukey',
-            api_key: '675925443541542',
-            api_secret: '86g6GjPMCdRvOD64b5CYm56cnxk'
+            cloud_name: config.cloud_name,
+            api_key: config.api_key,
+            api_secret: config.api_secret
         });
 
 
