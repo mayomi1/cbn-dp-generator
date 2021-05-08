@@ -5,3 +5,11 @@ To generate dps.
 ```
 https://cbn-dp.herokuapp.com
 ```
+
+# To run
+
+```
+npm i
+
+npm start
+```
