@@ -1,5 +1,5 @@
 # dp-generator
-To generate dps
+To generate dps.
 
 # Link
 ```
